@@ -1,14 +1,24 @@
 #include "HelpCommand.h"
 #include "CommandFactory.h"
 
-void HelpCommand::Execute(CommandEngine& cmdEngine) const {
-    for (const auto& pair : CommandFactory::listCommandRegistry()) {
-        std::vector<std::string> args = {pair.first};
-        auto cmd = CommandFactory::createCommand(args);
-        cmdEngine.printLine(pair.first + " - " + cmd->getDescription());
+HelpCommand::HelpCommand(const std::vector<std::string>& args) {
+    if (std::find(args.begin(), args.end(), "-h") != args.end()) {
+        setFlag(HELP);
+        clearFlag(DEFAULT);
     }
 }
 
-std::string HelpCommand::getDescription() const {
-    return "Provides a list of commands you can use.";
+void HelpCommand::Execute(CommandEngine& cmdEngine) const {
+    if (hasFlag(DEFAULT)) {
+        for (const auto& pair : CommandFactory::listCommandRegistry()) {
+            std::vector<std::string> args = { pair.first, "-h" };
+            auto cmd = CommandFactory::createCommand(args);
+            cmdEngine.printLine("---------- " + pair.first + " ----------");
+            cmd->Execute(cmdEngine);
+            cmdEngine.printLine("");
+        }
+    }
+    else if (hasFlag(HELP)) {
+        cmdEngine.printLine("Provides a list of commands you can use.");
+    }
 }

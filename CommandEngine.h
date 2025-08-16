@@ -4,19 +4,19 @@
 #include <vector>
 
 class Command;
-class CalculatorApp;
+class FileApp;
 
 class CommandEngine
 {
 private:
 	std::vector<std::string> output;
-	CalculatorApp* app = nullptr;
+	FileApp* app = nullptr;
 public:
 
 private:
 
 public:
-	void setApplication(CalculatorApp& events);
+	void setApplication(FileApp& events);
 	std::unique_ptr<Command> parse(const std::string& line);
 	void execute(std::unique_ptr<Command> cmd);
 	void parseAndRun(const std::string& line);

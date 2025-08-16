@@ -24,6 +24,7 @@
     <ProjectGuid>{5a1c7ed4-01f5-4675-9ed0-ca89afedf18a}</ProjectGuid>
     <RootNamespace>ConsoleCalc</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>FileManager</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -102,6 +103,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,34 +125,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AddCommand.cpp" />
-    <ClCompile Include="CalculatorApp.cpp" />
+    <ClCompile Include="FileApp.cpp" />
     <ClCompile Include="CommandEngine.cpp" />
     <ClCompile Include="CommandFactory.cpp" />
-    <ClCompile Include="DivCommand.cpp" />
     <ClCompile Include="EmptyCommand.cpp" />
     <ClCompile Include="ExitCommand.cpp" />
     <ClCompile Include="HelpCommand.cpp" />
     <ClCompile Include="IOFacade.cpp" />
+    <ClCompile Include="lsCommand.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MulCommand.cpp" />
-    <ClCompile Include="SubCommand.cpp" />
     <ClCompile Include="UnknownCommand.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AddCommand.h" />
-    <ClInclude Include="CalculatorApp.h" />
+    <ClInclude Include="FileApp.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandEngine.h" />
     <ClInclude Include="CommandFactory.h" />
-    <ClInclude Include="DivCommand.h" />
     <ClInclude Include="EmptyCommand.h" />
     <ClInclude Include="ExitCommand.h" />
     <ClInclude Include="HelpCommand.h" />
     <ClInclude Include="IAppEvents.h" />
     <ClInclude Include="IOFacade.h" />
-    <ClInclude Include="MulCommand.h" />
-    <ClInclude Include="SubCommand.h" />
+    <ClInclude Include="lsCommand.h" />
     <ClInclude Include="UnknownCommand.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>

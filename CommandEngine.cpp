@@ -1,10 +1,10 @@
 #include <iostream>
 #include "CommandEngine.h"
 #include "CommandFactory.h"
-#include "CalculatorApp.h"
+#include "FileApp.h"
 #include "utils.h"
 
-void CommandEngine::setApplication(CalculatorApp& app) {
+void CommandEngine::setApplication(FileApp& app) {
 	this->app = &app;
 }
 

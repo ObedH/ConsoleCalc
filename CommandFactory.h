@@ -4,11 +4,8 @@
 #include <unordered_map>
 #include <string>
 #include "Command.h"
-#include "AddCommand.h"
-#include "SubCommand.h"
-#include "MulCommand.h"
-#include "DivCommand.h"
 #include "ExitCommand.h"
+#include "lsCommand.h"
 #include "HelpCommand.h"
 #include "UnknownCommand.h"
 
@@ -19,10 +16,7 @@ private:
 
     static std::unordered_map<std::string, CreatorFn>& commandRegistry() {
         static std::unordered_map<std::string, CreatorFn> instance = {
-            { "add",            [](const std::vector<std::string>& args) { return std::make_unique<AddCommand>(args); } },
-            { "sub",            [](const std::vector<std::string>& args) { return std::make_unique<SubCommand>(args); } },
-            { "mul",            [](const std::vector<std::string>& args) { return std::make_unique<MulCommand>(args); } },
-            { "div",            [](const std::vector<std::string>& args) { return std::make_unique<DivCommand>(args); } },
+            { "ls",             [](const std::vector<std::string>& args) { return std::make_unique<lsCommand>(args); } },
             { "exit",           [](const std::vector<std::string>& args) { return std::make_unique<ExitCommand>(args); } },
             { "help",           [](const std::vector<std::string>& args) { return std::make_unique<HelpCommand>(args); } },
             { "unknown",        [](const std::vector<std::string>& args) { return std::make_unique<UnknownCommand>(args); } }

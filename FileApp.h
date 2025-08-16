@@ -4,7 +4,7 @@
 #include "CommandEngine.h"
 #include "IAppEvents.h"
 
-class CalculatorApp : IAppEvents
+class FileApp : IAppEvents
 {
 private:
 	IOFacade& ioFacade;
@@ -16,8 +16,8 @@ private:
 	void setup();
 	void loop();
 public:
-	CalculatorApp(IOFacade& io, CommandEngine& ce);
-	~CalculatorApp();
+	FileApp(IOFacade& io, CommandEngine& ce);
+	~FileApp();
 	void run();
 	void requestExit();
 };

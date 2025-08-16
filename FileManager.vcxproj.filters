@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="FileApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="IOFacade.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandEngine.cpp">
+      <Filter>src\command</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandFactory.cpp">
+      <Filter>src\command</Filter>
+    </ClCompile>
+    <ClCompile Include="EmptyCommand.cpp">
+      <Filter>src\command</Filter>
+    </ClCompile>
+    <ClCompile Include="ExitCommand.cpp">
+      <Filter>src\command</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpCommand.cpp">
+      <Filter>src\command</Filter>
+    </ClCompile>
+    <ClCompile Include="lsCommand.cpp">
+      <Filter>src\command</Filter>
+    </ClCompile>
+    <ClCompile Include="UnknownCommand.cpp">
+      <Filter>src\command</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileApp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="IAppEvents.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="IOFacade.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>include\command</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandEngine.h">
+      <Filter>include\command</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandFactory.h">
+      <Filter>include\command</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyCommand.h">
+      <Filter>include\command</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitCommand.h">
+      <Filter>include\command</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpCommand.h">
+      <Filter>include\command</Filter>
+    </ClInclude>
+    <ClInclude Include="lsCommand.h">
+      <Filter>include\command</Filter>
+    </ClInclude>
+    <ClInclude Include="UnknownCommand.h">
+      <Filter>include\command</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>include\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{a3a03ac3-ae8b-4f7d-ab44-9cf8cceae4cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{b3b51757-3aae-4f64-9d67-1145f213e423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\command">
+      <UniqueIdentifier>{80056381-dccf-4681-bed6-fffa3d6c2a23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\command">
+      <UniqueIdentifier>{979d2112-eb86-4778-925e-996169632c9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\util">
+      <UniqueIdentifier>{58ee77c6-c1e9-4e39-878b-6984a4b0947a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

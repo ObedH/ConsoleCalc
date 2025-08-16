@@ -1,24 +1,24 @@
 #include <string>
 #include "Command.h"
-#include "CalculatorApp.h"
+#include "FileApp.h"
 
-CalculatorApp::CalculatorApp(IOFacade& io, CommandEngine& ce) : ioFacade(io), cmdEngine(ce) {
+FileApp::FileApp(IOFacade& io, CommandEngine& ce) : ioFacade(io), cmdEngine(ce) {
 	isRunning = false;
 }
-CalculatorApp::~CalculatorApp() {
+FileApp::~FileApp() {
 	
 }
 
-void CalculatorApp::run() {
+void FileApp::run() {
 	setup();
 	isRunning = true;
 	loop();
 }
 
-void CalculatorApp::setup() {
+void FileApp::setup() {
 	ioFacade.setup();
 }
-void CalculatorApp::loop() {
+void FileApp::loop() {
 	while (isRunning) {
 		std::string inputLine = ioFacade.readLine();
 		cmdEngine.parseAndRun(inputLine);
@@ -26,6 +26,6 @@ void CalculatorApp::loop() {
 		ioFacade.flush();
 	}
 }
-void CalculatorApp::requestExit() {
+void FileApp::requestExit() {
 	isRunning = false;
 }

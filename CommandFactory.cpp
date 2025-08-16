@@ -1,8 +1,4 @@
 #include "CommandFactory.h"
-#include "AddCommand.h"
-#include "SubCommand.h"
-#include "MulCommand.h"
-#include "DivCommand.h"
 #include "ExitCommand.h"
 #include "EmptyCommand.h"
 #include "UnknownCommand.h"
